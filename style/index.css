@@ -1,0 +1,217 @@
+body {overflow:hidden; background: #d7d7d7;margin:0;padding:0;}
+
+.screen {
+  width: 320px;
+  height: 460px;
+  background:#000;
+  /*border: 1px solid black;*/
+}
+
+#canvas {
+  position:absolute;
+  left : 0;
+  top : 0;
+  border:1px solid #000;
+  width:320px; 
+  height:460px;
+}
+
+	#splash-screen {
+		text-align : center;
+	}
+	
+	#splash-screen .continue {
+		cursor : pointer;
+		font-size : 2em;
+		color: #fff;
+	}
+	
+	.logo {
+		font-family : Play-Regular;
+		margin : 0;
+		padding-bottom: 0.5em;
+		padding-top: 0.5em;
+		text-align : center;
+		color : rgb(28,	134,	238);
+		font-size : 3.8em;
+		line-height : 0.9em;
+		text-shadow : 0.03em  0.03em  0.03em rgb(3,	3,	3),
+					 -0.03em -0.03em  0.03em rgb(255,255,255),
+					  0.10em  0.10em  0.10em rgb(0,0,0);
+	}
+
+	.no-textshadow .logo {
+		filter : dropshadow(color=#000000,offX=3,offY=3);
+	}
+	
+	
+		/* Main menu styles */
+		#main-menu {
+			padding-top : 0.5em;
+		}
+
+		ul.menu {
+			text-align : center;
+			margin : 0;
+			padding : 0;
+			list-style : none;
+		}
+
+		ul.menu li {
+			margin : 1em 0;
+		}
+
+		ul.menu li button {
+			font-family : Comfortaa-Regular;
+			font-size : 1.5em;
+			color : rgb(255, 255, 255);
+			width : 10em;
+			height : 1.5em;
+			background : rgb(65,105,225);
+			border : 0.1em solid rgb(255, 255, 255);
+			border-radius : 0.5em;
+			-webkit-box-shadow : 0.2em 0.2em 0.3em rgb(0,0,0);
+			-moz-box-shadow : 0.2em 0.2em 0.3em rgb(0,0,0);
+			box-shadow : 0.2em 0.2em 0.3em rgb(0,0,0);
+		}
+
+		ul.menu li button:hover {
+			background : rgb(30,40,0);
+		}
+
+		ul.menu li button:active {
+			color : rgb(205,0,0);
+			background : rgb(30,40,0);
+		}
+		
+		/* High score */
+		#hiscore {
+			margin-top : 0.25em;
+			font-size : 0.5em;
+			color: #fff; 
+		}
+
+/* Install screen for iOS devices */
+#install-screen  {
+    padding-top : 0.5em;
+    text-align : center;
+}
+
+#install-screen span {
+    font-size : 0.75em;
+    display : inline-block;
+    padding : 0 0.5em;
+}
+
+.game-screen {
+    width:220px;
+    height:460px;
+	float: left;
+}
+
+.button { 
+	position:absolute; 
+	border:1px solid black; 
+}
+	
+.control {
+    position:absolute;
+    background-color:transparent;
+    border:1px solid #000;
+}
+
+.move_left, .move_right {
+    height:80px;
+    width:90px;
+    top:290px;
+}
+
+.move_left {
+    left:0px;
+	opacity: 0.4;
+}
+.move_right{
+    left:230px;
+	opacity: 0.4;
+}
+
+.move_up, .move_show_controls {
+    width:110px;
+    height:80px;
+}
+
+.move_up {  
+    top:290px;
+    left:105px;
+	opacity: 0.4;
+}
+
+.space, .move_show_controls {
+    width:320px;
+    height:80px;
+}
+
+.space {
+	top:380px;
+    left:0px;
+	opacity: 0.4;
+}
+
+.move_pause, .move_show_controls {
+    width:80px;
+    height:80px;
+}
+
+.for_help {
+    display:none;
+}
+
+.for_help span {
+    position:relative;
+    top:25px;
+}
+
+.show_controls .for_help {
+    color:#000;
+    display:block;
+    margin:0 auto;
+    text-align:center;
+    vertical-align:middle;
+    /*padding-top:25%;*/
+    font-size:150%;
+	opacity: 0.4;
+}
+
+#controls {
+    display:inline;
+    height:0px;
+    position:absolute;
+    top:0px;
+    left:0px;
+}
+
+#back {
+position: absolute;
+display: none;
+top: 255px;
+left: 100px;
+}
+
+h2 {
+	font-family : Arial;
+	font-size : 1em;
+	color: #6f74ff;
+	margin: 1em;
+}
+
+p {
+	font-family : Arial;
+	font-size : 1em;
+	color: #FFF;
+	margin: 1em;
+}
+
+#game {
+position: absolute;
+	top: 100px;
+}

@@ -1,0 +1,36 @@
+CACHE MANIFEST
+
+CACHE:
+
+# The Revenge Of The Titanic Manifest
+
+# Images
+images/install-icon.png
+images/iphone_tetris_icon.png
+images/startup.png
+
+# Fonts
+fonts/Comfortaa-Regular.ttf
+fonts/comfortaa-regular-webfont.woff
+fonts/Play-Regular.ttf
+fonts/Play-Regular-webfont.woff
+fonts/ReenieBeanie.ttf
+fonts/ReenieBeanie-webfont.woff
+fonts/geo.ttf
+fonts/geo.woff
+fonts/slackey.ttf
+fonts/slackey.woff
+
+# External pages
+index.html
+sound/39459__THE_bizniss__laser.wav
+sound/51467__smcameron__missile_explosion.wav
+scripts/screen.game.js
+scripts/screen.install.js
+scripts/vector_battle_regular.typeface.js
+scripts/jquery-1.7.1.min.js
+style/fontfaces.css
+style/index.css
+
+# Resources that should be downloaded from the web
+NETWORK:

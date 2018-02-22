@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<html manifest="offline.appcache">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <title>Asteroids</title>
+  
+	<link rel="stylesheet" href="style/index.css" type="text/css" media="screen, mobile" title="main" charset="utf-8"/>
+	<link rel="stylesheet" href="style/fontfaces.css" />
+	
+	<link rel="apple-touch-icon" href="images/iphone_tetris_icon.png"/>
+    <link rel="apple-touch-startup-image" href="images/asteroidmenu.png" />
+	
+	<script src="scripts/jquery-1.7.1.min.js"></script>
+    <script src="scripts/vector_battle_regular.typeface.js"></script>	
+	<script src="scripts/screen.game.js"></script>
+
+</head>
+<body>
+	<div id="splash-screen" class="screen" >
+		<h1 class="logo">Asteroids</h1>
+			<span class="continue">Click to continue</span>		
+	</div> <!-- splash-screen div -->
+		
+	<div id="install-screen" class="screen"  style="display: none;">
+		<h1 class="logo">Asteroids</h1>
+        <span>Click the <img src="images/install-icon.png" alt="Install icon"> button to install the game to your home screen.</span>
+	</div> <!-- install-screen div -->
+		
+	<div id="main-menu" class="screen"  style="display: none;">
+		<h2 class="logo">Asteroids</h2>
+            <ul class="menu">
+                <li><button id="game-play" name="game-area">Play</button>
+                <li><button id="game-score" name="hiscore">Highscore</button>
+                <li><button id="game-about" name="about-screen">About</button>
+                <li><button id="game-exit" name="exit-screen">Exit</button>
+            </ul> <!-- menu ul -->
+	</div> <!-- main-menu div -->
+		
+	<div id="game-area" style="display: none;">
+		<div id="game-screen">
+			<canvas id="canvas" width="320" height="460" ></canvas>				
+		</div> <!-- game-screen div -->
+				
+		<div id="controls" class="show_controls" style="display: none;">
+			<div class="control move_up"><div id="up" class="for_help move_up"><span>THRUST</span></div></div>
+			<div class="control move_left"><div id="left" class="for_help move_left"><span>LEFT</span></div></div>
+			<div class="control move_right"><div id="right" class="for_help move_right"><span>RIGHT</span></div></div>
+			<div class="control space"><div id="fire" class="for_help space"><span>FIRE</span></div></div>
+		</div> <!-- controls div -->
+				
+		<script>
+			$("#controls").click(function () {
+				$("#pause").click();
+				$("#up").click();
+				$("#left").click();
+				$("#right").click();
+				$("#fire").click();
+			});
+		</script>
+				
+		<button id="back">Back to Menu</button>
+		
+		<script>
+			$("#back").click(function () {
+				$("#game-area").hide();
+				$("#back").hide();
+				$("#main-menu").show();
+				$("#controls").hide();
+				highscore();
+			});
+		</script>
+	</div> <!-- game-area div -->
+						
+	<div id="hiscore" class="screen"  style="display: none;">
+        <h1 class="logo">High Score</h1>
+			<script>
+			function highscore () {
+				if (localStorage.getItem("1")) {
+				var a = localStorage.getItem("1");
+				$('<h1>'+ a + '</h1>').appendTo('#hiscore');
+				}
+			}
+			</script>					
+			
+	<footer>
+        <button id="score-back" name="back" >Back</button>
+		<script>
+			$("#score-back").click(function () {
+				$("#main-menu").show();
+				$("#hiscore").hide();
+			});
+		</script>
+	</footer>
+			
+    </div> <!-- highscore div -->
+		
+	<div id="about-screen" class="screen"  style="display: none;">
+		<h1 class="logo">About</h1>
+			<p>Asteroids is a canvas game created using HTML5 and Javascript. Objective of the game
+				is to destroy asteroids and stay alive. You have 3 lives. Use them wisely as its game over when you run out!
+				Avoid the asteroids. Especially the one with the mustache! It shoots lasers! </p>
+			<h2>Controls</h2>	
+			<p>To play use the thrust to move forward. Left and right to rotate the ship and fire to shoot the laser.</p>	
+			
+	<footer>
+        <button id="about-back" name="back">Back</button>
+		<script>
+			$("#about-back").click(function () {
+				$("#main-menu").show();
+				$("#about-screen").hide();
+			});
+		</script>
+    </footer>
+			
+	</div> <!-- about-screen div -->
+		
+	<div id="exit" class="screen"  style="display: none;"></div>
+		
+	<script>
+	$("#splash-screen").click(function () {
+		$("#splash-screen").hide();
+		$("#main-menu").show();
+		$("#hiscore").hide();
+		$("#about-screen").hide();
+		$("#controls").hide();
+		$("#game-area").hide();
+	});
+
+	$("#game-play").click(function () {
+		$("#splash-screen").hide();
+		$("#main-menu").hide();
+		$("#hiscore").hide();
+		$("#about-screen").hide();
+		$("#controls").show();
+		$("#game-area").show();
+	});
+
+	$("#game-score").click(function () {
+		$("#splash-screen").hide();
+		$("#main-menu").hide();
+		$("#hiscore").show();
+		$("#about-screen").hide();
+		$("#controls").hide();
+		$("#game-area").hide();
+	});
+
+	$("#game-about").click(function () {
+		$("#splash-screen").hide();
+		$("#main-menu").hide();
+		$("#hiscore").hide();
+		$("#about-screen").show();
+		$("#controls").hide();
+		$("#game-area").hide();
+	});
+	
+	$("#game-exit").click(function () {
+		$("#splash-screen").hide();
+		$("#main-menu").hide();
+		$("#hiscore").hide();
+		$("#about-screen").hide();
+		$("#controls").hide();
+		$("#game-area").hide();
+	});
+	</script>
+	
+  </body>
+</html>
